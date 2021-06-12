@@ -13,7 +13,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="cart_dto")
+@Table(name = "cart_dto")
 public class CartDTO {
 	@Id
 	@Column(name = "cart_id")
@@ -24,7 +24,7 @@ public class CartDTO {
 	private Customer customerId;
 
 	@OneToMany
-	@JoinTable(name = "cart_veg_link", joinColumns = @JoinColumn(name="cart_id"), inverseJoinColumns = @JoinColumn(name="veg_id"))
+	@JoinTable(name = "cart_veg_link", joinColumns = @JoinColumn(name = "cart_id"), inverseJoinColumns = @JoinColumn(name = "veg_id"))
 	private List<VegetableDTO> vegetables = new ArrayList<VegetableDTO>();
 
 	public int getCartId() {
@@ -52,3 +52,4 @@ public class CartDTO {
 	}
 
 }
+
