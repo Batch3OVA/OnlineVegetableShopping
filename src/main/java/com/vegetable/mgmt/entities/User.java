@@ -4,13 +4,20 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="user_details")
 public class User {
 	@Id
 	@Column(name = "user_id")
+	@NotNull
+     @Size(min=2,max=20)
 	private String userId;
+	@NotNull
+    @Min(5)
 	private String password;
 	@Column(name = "confirm_password")
 	private String confirmPassword;
