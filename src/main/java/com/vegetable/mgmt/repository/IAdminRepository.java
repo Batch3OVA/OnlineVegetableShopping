@@ -1,11 +1,10 @@
 package com.vegetable.mgmt.repository;
 
+import org.springframework.data.repository.CrudRepository;
+
 import com.vegetable.mgmt.entities.Admin;
 
-public interface IAdminRepository {
-	public Admin addAdmin(Admin admin);
-	public Admin updateAdminDetails(Admin admin);
-	public Admin removeAdmin(Admin admin);
-	public Admin viewAdmin(Admin admin);
+public interface IAdminRepository extends CrudRepository<Admin,Integer>{
+	
 	
 }
