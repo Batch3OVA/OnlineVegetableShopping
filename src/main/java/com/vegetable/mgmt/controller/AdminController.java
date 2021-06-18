@@ -24,15 +24,18 @@ import com.vegetable.mgmt.service.impl.IAdminServiceImpl;
 public class AdminController {
 @Autowired
 IAdminServiceImpl service;
+//save admin
 	@PostMapping()
 	public ResponseEntity<?> getAddAdmin(@RequestBody Admin admin){
 		return new ResponseEntity<String> (service.addAdmin(admin),HttpStatus.CREATED);
 		
 	}
+	//update admin //
 	@PutMapping("{adminId}")
 	public ResponseEntity<?> getUpdateAdminDetails(@RequestBody Admin admin,@PathVariable int adminId){
 		return new ResponseEntity<String> (service.updateAdminDetails(admin,adminId),HttpStatus.ACCEPTED);
 		}
+	//delete admin//
 	@DeleteMapping("{adminId}")
 	public ResponseEntity<?> getRemoveAdmin(@PathVariable int adminId){
 		return new ResponseEntity<String>(service.removeAdmin(adminId),HttpStatus.OK);
