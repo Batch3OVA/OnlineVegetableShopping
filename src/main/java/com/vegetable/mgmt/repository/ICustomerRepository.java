@@ -11,4 +11,5 @@ public interface ICustomerRepository {
 	public Customer removeCustomer(Customer customer);
 	public Customer viewCustomer(Customer customer);
 	public List<Customer> viewCustomerList(String location);
+
 }
