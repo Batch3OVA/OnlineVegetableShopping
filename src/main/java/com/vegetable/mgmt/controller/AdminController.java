@@ -48,5 +48,6 @@ IAdminServiceImpl service;
 	public Admin ViewAdmin(@PathVariable int adminId){
 		return service.viewAdminDetails(adminId);
 	}
+
 }
 
